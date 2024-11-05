@@ -32,6 +32,7 @@ from rest_framework.views import APIView
 class profile(APIView):
     def post(self,request):
         data = request.data
+        print('\n\n\n',data,'\n\n\n')
 
         serializer = EmployeeSerializer(data = data)
         if serializer.is_valid():
